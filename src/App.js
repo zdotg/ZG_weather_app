@@ -1,8 +1,8 @@
 import React from "react";
-import SearchBar from "./components/SearchBar";
-import CurrentWeather from "./components/CurrentWeather";
-import WeatherForecast from "./components/WeatherForecast";
-import TempSettings from "./components/TempSettings";
+import SearchBar from "./app/components/SearchBar";
+import CurrentWeather from "./app/components/CurrentWeather";
+import WeatherForecast from "./app/components/WeatherForecast";
+import TempSetting from "./app/components/TempSetting";
 import "./App.css";
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
           <WeatherForecast weatherData={weatherData} unit={unit} />
         </>
       )}
-      <TempSettings unit={unit} handleUnitChange={handleUnitChange} />
+      <TempSetting unit={unit} handleUnitChange={handleUnitChange} />
     </div>
   );
 }
