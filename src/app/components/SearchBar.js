@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ city, setCity, handleSearch }) => {
   const [query, setQuery] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSearch(query);
+    handleSearch(query);
   };
 
   const handleChange = (event) => {
@@ -13,9 +13,16 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={query} onChange={handleChange} />
-      <button type="submit">Search</button>
+    <form className="search-bar" onSubmit={handleSubmit}>
+      <input
+        className="search-bar input"
+        type="text"
+        value={query}
+        onChange={handleChange}
+      />
+      <button className="button" type="submit">
+        Search
+      </button>
     </form>
   );
 };

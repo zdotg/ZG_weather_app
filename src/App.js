@@ -32,6 +32,7 @@ function App() {
 
   return (
     <div className="body">
+      <h1>React Weather App</h1>
       <SearchBar city={city} setCity={setCity} handleSearch={handleSearch} />
       {weatherData && (
         <>
