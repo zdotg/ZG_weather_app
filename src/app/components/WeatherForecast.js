@@ -6,9 +6,10 @@ const WeatherForecast = ({ forecastData }) => {
     <div>
       <h2>Weather Forecast</h2>
       <div>
-        {forecastData.map((data, index) => (
-          <WeatherForecastItem key={index} forecast={data} />
-        ))}
+        {forecastData &&
+          forecastData.map((data, index) => (
+            <WeatherForecastItem key={index} forecast={data} />
+          ))}
       </div>
     </div>
   );

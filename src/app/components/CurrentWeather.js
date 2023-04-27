@@ -1,7 +1,14 @@
 import React from "react";
 
 const CurrentWeather = ({ weatherData, unit }) => {
+  if (!weatherData) {
+    return <div>Loading...</div>; // placeholder for unavailable data
+  }
   const { name, main, weather } = weatherData;
+
+  if (!main) {
+    return <div>Loading...</div>; // placeholder for unavailable data
+  }
 
   const temperature =
     unit === "metric"
