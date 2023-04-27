@@ -11,7 +11,7 @@ const TempSetting = ({ unit, setUnit }) => {
           name="temperature-unit"
           value="metric"
           checked={unit === "metric"}
-          onChange={() => setUnit("metric")}
+          onChange={(event) => setUnit(event.target.value)}
         />
         <label className="settings label" htmlFor="celsius">
           Celsius
@@ -24,7 +24,7 @@ const TempSetting = ({ unit, setUnit }) => {
           name="temperature-unit"
           value="imperial"
           checked={unit === "imperial"}
-          onChange={() => setUnit("imperial")}
+          onChange={(event) => setUnit(event.target.value)}
         />
         <label className="settings label" htmlFor="fahrenheit">
           Fahrenheit
